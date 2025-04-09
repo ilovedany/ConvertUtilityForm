@@ -31,7 +31,7 @@ namespace ConvertUtilityForm
 
                     case 2:
                         _progressCallback?.Invoke(50);
-                        string xmlDataString = xmlFromDataBase.GetStringXmlFromDB("Host=localhost;Port=5432;Database=SourceAPI;Username=postgres;Password=123", "users", "xamldata", 2);
+                        string xmlDataString = xmlFromDataBase.GetStringXmlFromDB("connectionString", "table", "column", 1);
                         _progressCallback?.Invoke(75);
                         XmlToExcelConverter.ConvertXmlToXlsxString(xmlDataString, pathToSave, openOrNo); //вызов утилиты по строке, которая содержит xml
                         _progressCallback?.Invoke(100);
