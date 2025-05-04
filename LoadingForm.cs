@@ -5,6 +5,7 @@ public partial class LoadingForm : Form
     public LoadingForm(int selectView,string xmlFilePath,string xlsxFilePath,int deleteOrNo,int openOrNo)
     {
         InitializeComponent();
+        this.TopMost = true;
         Shown += LoadingFormAsync; //событие показа загрузочной формы
 
         this.selectView = selectView;
